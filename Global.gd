@@ -2,7 +2,7 @@ extends Node
 
 
 #Variaveis Globais
-
+var Player_name = Dialogic.var.Status.Player_name
 
 
 #Preciso fazer um gráfico mal desenhado dos status do jogador! à mao!
