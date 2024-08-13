@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=12 format=3 uid="uid://c5dc7bfsb1q3v"]
+
+[ext_resource type="Resource" uid="uid://buwenvn5278et" path="res://Dialogic/Style.tres" id="1_g035c"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_2irjr"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="3_xb7em"]
+
+[sub_resource type="Resource" id="Resource_a557o"]
+script = ExtResource("2_2irjr")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_qpvct"]
+script = ExtResource("2_2irjr")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_ai7ed"]
+script = ExtResource("2_2irjr")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_axqno"]
+script = ExtResource("2_2irjr")
+overrides = {
+"typing_sounds_mode": "2",
+"typing_sounds_sounds_folder": "\"res://Audios/Typingsounds\""
+}
+
+[sub_resource type="Resource" id="Resource_woxpm"]
+script = ExtResource("2_2irjr")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_if7kd"]
+script = ExtResource("2_2irjr")
+overrides = {
+"sounds_pressed": "\"res://Audios/Lapis Escrevendo.mp3\""
+}
+
+[sub_resource type="Resource" id="Resource_lgh5u"]
+script = ExtResource("2_2irjr")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_loi2y"]
+script = ExtResource("2_2irjr")
+overrides = {}
+
+[resource]
+script = ExtResource("3_xb7em")
+name = "Protag_Style"
+inherits = ExtResource("1_g035c")
+base_overrides = {}
+layers = Array[ExtResource("2_2irjr")]([SubResource("Resource_a557o"), SubResource("Resource_qpvct"), SubResource("Resource_ai7ed"), SubResource("Resource_axqno"), SubResource("Resource_woxpm"), SubResource("Resource_if7kd"), SubResource("Resource_lgh5u"), SubResource("Resource_loi2y")])
+metadata/_latest_layer = 3

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btq1kiujp62l0"
+path="res://.godot/imported/Livro Caindo.mp3-ab0d877d51bd13e03a920870d5a3cc26.mp3str"
+
+[deps]
+
+source_file="res://Audios/Livro Caindo.mp3"
+dest_files=["res://.godot/imported/Livro Caindo.mp3-ab0d877d51bd13e03a920870d5a3cc26.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

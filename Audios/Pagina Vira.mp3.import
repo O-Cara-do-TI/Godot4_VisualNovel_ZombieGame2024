@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dph3po56c7jiv"
+path="res://.godot/imported/Pagina Vira.mp3-a0fe745f195d6b6d7d2a42efc593f343.mp3str"
+
+[deps]
+
+source_file="res://Audios/Pagina Vira.mp3"
+dest_files=["res://.godot/imported/Pagina Vira.mp3-a0fe745f195d6b6d7d2a42efc593f343.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5mc6vuehw2qq"
+path="res://.godot/imported/Borracha Apaga.mp3-4b93f7f2e23c32e1884bb7d3f30aa743.mp3str"
+
+[deps]
+
+source_file="res://Audios/Borracha Apaga.mp3"
+dest_files=["res://.godot/imported/Borracha Apaga.mp3-4b93f7f2e23c32e1884bb7d3f30aa743.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

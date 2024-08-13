@@ -1,0 +1,179 @@
+[gd_scene load_steps=11 format=3 uid="uid://cu7bsmomimpar"]
+
+[ext_resource type="Texture2D" uid="uid://siokeolacblq" path="res://Resources/Map.jpg" id="1_ao6c1"]
+[ext_resource type="Script" path="res://Scenes/map.gd" id="1_whx05"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="2_5gtay"]
+[ext_resource type="Texture2D" uid="uid://ux1em2bovtug" path="res://Resources/Textures/Map_placeholder_01.jpeg" id="2_8x5pk"]
+[ext_resource type="Texture2D" uid="uid://tnlqo7hf1xk1" path="res://Resources/Textures/Marker_placeholder.jpg" id="2_cv2us"]
+[ext_resource type="Texture2D" uid="uid://c3420jccv27y7" path="res://Resources/Textures/Pixelhand.png" id="3_vbs4j"]
+[ext_resource type="Texture2D" uid="uid://bbic0cx7wyhol" path="res://Resources/Textures/Exclamation_placeholder.PNG" id="5_yf8ns"]
+
+[sub_resource type="Curve2D" id="Curve2D_f3m5b"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 710, 505, 0, 0, 0, 0, 667, 499, 0, 0, 0, 0, 634, 510, 1.5874, 4.7622, -1.5874, -4.7622, 584, 523, 0, 0, 0, 0, 540, 544, 5.5559, 10.3181, -5.5559, -10.3181, 498, 524, 0, 0, 0, 0, 444, 450, 14.4642, 29.9615, -14.4642, -29.9615, 398, 389, 0, 0, 0, 0, 465, 364, -31.1304, 36.1416, 31.1304, -36.1416, 567, 247, 0, 0, 0, 0, 630, 202, 0, 0, 0, 0, 660, 178)
+}
+point_count = 12
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s15ji"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mn1uq"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_whx05")
+
+[node name="Placeholder_Copabota" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(593, 255)
+texture = ExtResource("1_ao6c1")
+
+[node name="Placeholder_handdraw" type="Sprite2D" parent="."]
+position = Vector2(579, 344)
+scale = Vector2(0.287663, 0.227365)
+texture = ExtResource("2_8x5pk")
+metadata/_edit_lock_ = true
+
+[node name="Pixelhand" type="Sprite2D" parent="."]
+position = Vector2(946, 522)
+scale = Vector2(-0.631804, 0.608197)
+texture = ExtResource("3_vbs4j")
+
+[node name="Player" type="Node2D" parent="."]
+script = ExtResource("2_5gtay")
+
+[node name="Path2D" type="Path2D" parent="Player"]
+curve = SubResource("Curve2D_f3m5b")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(710, 505)
+rotation = 2.7012
+rotates = false
+
+[node name="Camera2D" type="Camera2D" parent="Player/Path2D/PathFollow2D"]
+unique_name_in_owner = true
+position = Vector2(0.904587, 0.4263)
+rotation = -2.7012
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="Interact_button" type="TextureButton" parent="Player/Path2D/PathFollow2D/Camera2D"]
+unique_name_in_owner = true
+visible = false
+offset_left = -7.0
+offset_top = 49.0
+offset_right = 206.0
+offset_bottom = 434.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0738003, 0.0738003)
+texture_normal = ExtResource("5_yf8ns")
+texture_hover = ExtResource("5_yf8ns")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Path2D/PathFollow2D"]
+rotation = -2.69972
+scale = Vector2(0.0299645, 0.0299645)
+texture = ExtResource("2_cv2us")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Player/Path2D/PathFollow2D/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Path2D/PathFollow2D/Sprite2D/CharacterBody2D"]
+scale = Vector2(56.785, 56.785)
+shape = SubResource("CircleShape2D_s15ji")
+
+[node name="Map_events" type="Node2D" parent="."]
+
+[node name="01Market_Area2D" type="Area2D" parent="Map_events"]
+position = Vector2(632, 511)
+scale = Vector2(2.00612, 1.97556)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_events/01Market_Area2D"]
+shape = SubResource("CircleShape2D_mn1uq")
+
+[node name="02Restaurant_Area2D" type="Area2D" parent="Map_events"]
+position = Vector2(547, 542)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_events/02Restaurant_Area2D"]
+shape = SubResource("CircleShape2D_mn1uq")
+
+[node name="03Tunnel_Area2D" type="Area2D" parent="Map_events"]
+position = Vector2(441, 444)
+scale = Vector2(1.96225, 2.49106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_events/03Tunnel_Area2D"]
+rotation = -0.988256
+scale = Vector2(1.94875, 2.36696)
+shape = SubResource("CircleShape2D_mn1uq")
+
+[node name="04Mall_Area2D" type="Area2D" parent="Map_events"]
+position = Vector2(464, 365)
+scale = Vector2(2.99787, 2.13107)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_events/04Mall_Area2D"]
+shape = SubResource("CircleShape2D_mn1uq")
+
+[node name="05University_Area2D" type="Area2D" parent="Map_events"]
+position = Vector2(566, 246)
+scale = Vector2(2.67905, 2.77898)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_events/05University_Area2D"]
+shape = SubResource("CircleShape2D_mn1uq")
+
+[node name="06Marina_Area2D" type="Area2D" parent="Map_events"]
+position = Vector2(651, 187)
+scale = Vector2(2.48283, 2.48283)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_events/06Marina_Area2D"]
+shape = SubResource("CircleShape2D_mn1uq")
+
+[node name="Dica" type="Label" parent="."]
+offset_left = 1165.0
+offset_top = 397.0
+offset_right = 1416.0
+offset_bottom = 576.0
+text = "Progress_ratio Maximo deve ser:
+Evento01: 0.1261
+Evento02: 0.2432
+Evento03: 0.3964
+Evento04: 0.6444
+Evento05: 0.8516
+Evento06: 0.98"
+
+[node name="Dica2" type="Label" parent="."]
+offset_left = 1161.0
+offset_top = 214.0
+offset_right = 1435.0
+offset_bottom = 276.0
+text = "Feito: Ao colidir, botão de interação
+aparece. Se não, some."
+
+[node name="Dica3" type="Label" parent="."]
+offset_left = 1162.0
+offset_top = 319.0
+offset_right = 1413.0
+offset_bottom = 372.0
+text = "Musica de fundo
+Fotos de fundos
+Mais sons de lapis"
+
+[node name="Dica4" type="Label" parent="."]
+offset_left = 1161.0
+offset_top = 265.0
+offset_right = 1459.0
+offset_bottom = 327.0
+text = "Main menu com creditos
+cursor personalizado(gabriel ou felipe)"
+
+[connection signal="body_entered" from="Map_events/01Market_Area2D" to="." method="_on_market_area_2d_body_entered"]
+[connection signal="body_exited" from="Map_events/01Market_Area2D" to="." method="_on_market_area_2d_body_exited"]
+[connection signal="body_entered" from="Map_events/02Restaurant_Area2D" to="." method="_on_restaurant_area_2d_body_entered"]
+[connection signal="body_exited" from="Map_events/02Restaurant_Area2D" to="." method="_on_restaurant_area_2d_body_exited"]
+[connection signal="body_entered" from="Map_events/03Tunnel_Area2D" to="." method="_on_tunnel_area_2d_body_entered"]
+[connection signal="body_exited" from="Map_events/03Tunnel_Area2D" to="." method="_on_tunnel_area_2d_body_exited"]
+[connection signal="body_entered" from="Map_events/04Mall_Area2D" to="." method="_on_mall_area_2d_body_entered"]
+[connection signal="body_exited" from="Map_events/04Mall_Area2D" to="." method="_on_mall_area_2d_body_exited"]
+[connection signal="body_entered" from="Map_events/05University_Area2D" to="." method="_on_university_area_2d_body_entered"]
+[connection signal="body_exited" from="Map_events/05University_Area2D" to="." method="_on_university_area_2d_body_exited"]
+[connection signal="body_entered" from="Map_events/06Marina_Area2D" to="." method="_on_marina_area_2d_body_entered"]
+[connection signal="body_exited" from="Map_events/06Marina_Area2D" to="." method="_on_marina_area_2d_body_exited"]
