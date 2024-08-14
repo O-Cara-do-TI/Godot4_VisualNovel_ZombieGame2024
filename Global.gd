@@ -2,7 +2,13 @@ extends Node
 
 
 #Variaveis Globais
-var Player_name = Dialogic.var.Status.Player_name
+var Player_name = Dialogic.var.Status.Player_name #Nome do jogador lá no Dialogic
+var Player_background = Dialogic.var.Status.Player_background #Background do jogador lá no Dialogic
+var Humanity_level = Dialogic.var.Status.Humanity_level #Nivel de Humanidade lá no Dialogic
+var Speech_level = Dialogic.var.Status.Speech #Nivel de Speech lá no Dialogic
+var Strenght_level = Dialogic.var.Status.Strenght #Nivel de Força lá no Dialogic
+var Survival_level = Dialogic.var.Status.Survival #Nivel de Survival lá no Dialogic
+
 
 
 #Preciso fazer um gráfico mal desenhado dos status do jogador! à mao!
@@ -18,12 +24,13 @@ var progress_ratio_max: float = 0.98 #Posição MAXIMA de até onde o jogador po
 #Variaveis da História
 
 #Quest Principal
-var story_event01_market: bool = true
-var story_event02_acai: bool = false
-var story_event03_tunnel: bool = false
-var story_event04_shopping: bool = false
-var story_event05_university: bool = false
-var story_event06_pier: bool = false
+var story_event00_Intro: bool = Dialogic.var.Partes_de_Plot.Main_quest.Introduction_complete
+var story_event01_market: bool = Dialogic.var.Partes_de_Plot.Main_quest.story_event01_market
+var story_event02_acai: bool = Dialogic.var.Partes_de_Plot.Main_quest.story_event02_acai
+var story_event03_tunnel: bool = Dialogic.var.Partes_de_Plot.Main_quest.story_event03_tunnel
+var story_event04_shopping: bool = Dialogic.var.Partes_de_Plot.Main_quest.story_event04_shopping
+var story_event05_university: bool = Dialogic.var.Partes_de_Plot.Main_quest.story_event05_university
+var story_event06_pier: bool = Dialogic.var.Partes_de_Plot.Main_quest.story_event06_pier
 
 #Companions
-
+var Vanda_affection = Dialogic.var.Relacionamentos.Companions.Vanda_affection #Nivel de Amizade com a Vanda lá no Dialogic

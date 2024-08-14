@@ -35,7 +35,7 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogic/Style.tres", "res://Dialogic/Protag_Style.tres"]
 layout/default_style="res://Dialogic/Style.tres"
 variables={
-"Partes de Plot": {
+"Partes_de_Plot": {
 "Main_quest": {
 "Introduction_complete": false,
 "story_event01_market": false,
