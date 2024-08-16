@@ -12,6 +12,10 @@ func _process(delta):
 
 
 
+func game_progress():
+	if Global.story_event00_Intro == true:
+		Global.progress_ratio_max = 0.1261
+		print("o Progress_ratio maximo é:", Global.progress_ratio_max)
 
 
 #Colisor do Evento 01

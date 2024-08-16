@@ -129,9 +129,9 @@ shape = SubResource("CircleShape2D_mn1uq")
 
 [node name="Dica" type="Label" parent="."]
 offset_left = 1165.0
-offset_top = 397.0
+offset_top = 449.0
 offset_right = 1416.0
-offset_bottom = 576.0
+offset_bottom = 628.0
 text = "Progress_ratio Maximo deve ser:
 Evento01: 0.1261
 Evento02: 0.2432
@@ -150,18 +150,19 @@ aparece. Se não, some."
 
 [node name="Dica3" type="Label" parent="."]
 offset_left = 1162.0
-offset_top = 319.0
-offset_right = 1413.0
-offset_bottom = 372.0
+offset_top = 332.0
+offset_right = 1415.0
+offset_bottom = 433.0
 text = "Musica de fundo
 Fotos de fundos
-Mais sons de lapis"
+Mais sons de lapis
+Aparencia do Botão de Interação"
 
 [node name="Dica4" type="Label" parent="."]
-offset_left = 1161.0
-offset_top = 265.0
-offset_right = 1459.0
-offset_bottom = 327.0
+offset_left = 1159.0
+offset_top = 270.0
+offset_right = 1457.0
+offset_bottom = 332.0
 text = "Main menu com creditos
 cursor personalizado(gabriel ou felipe)"
 

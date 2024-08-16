@@ -53,4 +53,3 @@ func player_movement(delta): #W pra + e S pra menas
 	
 	
 	
-

@@ -7,12 +7,12 @@ Uma lenta e horrenda morte.
 Pelo menos é o que Deus falaria para ti se não tivesse colocado em seu caminho um diário para ler. Um diário que pode ou não mudar sua visão de mundo.
 Em um final de semana, você encontra um diário de um sobrevivente do velho mundo.\
 Como seres curiosos que somos, humanos, você decide lê-lo. Decide fazer esse o seu objetivo pro final de semana.
-Este é o diário de...
+Diary_reader: Este é o diário de...
 [text_input text="De quem é este diário?" var="Status.Player_name"]
 if {Status.Player_name} == "Toby Fox":
 	Haha.
 # Posso fazer uns easter egg bolados de nomes! Tipo Toby Fox e etc.
-Na capa apenas está escrito "Diário de {Status.Player_name}." Há uma mancha de sangue na ponta. Abro.\
+Diary_reader: Na capa apenas está escrito "Diário de {Status.Player_name}." Há uma mancha de sangue na ponta. Abro.\
 Logo na primeira página vejo algumas coisas escritas, mas no começo ele parece se identificar...
 Player: Antes de tudo isso acontecer, eu era...
 - Politico.
@@ -24,7 +24,8 @@ Player: Antes de tudo isso acontecer, eu era...
 	Em seguida ele parece esclarecer algumas regras que ele usou para lembrar a si mesmo ou para quem quer que encontrasse esse diário.
 	Player: [color=red]Nomes escritos com caneta vermelha[/color] são aqueles as inimizades que fiz durante minha jornada...\
 [color=blue]Nomes escritos com a azul[/color] são aqueles que me ajudaram.\
-[color=green]Nomes em verde[/color] são,surpreendentemente, pessoas com quem eu me importei em algum momento...
+[color=green]Nomes em verde[/color] são,surpreendentemente, pessoas com quem eu me importei em algum momento...\
+O restante está a lapis.
 - Militar.
 	set {Status.Humanity_level} = 7
 	set {Status.Speech} = 1
@@ -34,15 +35,17 @@ Player: Antes de tudo isso acontecer, eu era...
 	Em seguida ele parece esclarecer algumas regras que ele usou para lembrar a si mesmo ou para quem quer que encontrasse esse diário.
 	Player: [color=red]Nomes escritos com caneta vermelha[/color] são os filhos da puta que eu vou matar ou que já matei.\
 [color=blue]Nomes escritos com a azul[/color] são aliados que fiz pelo caminho. Pessoas que ajudei e que me ajudaram.\
-[color=green]Nomes em verde[/color] são pessoas que viraram queridos para mim, seja amigos ou familia de consideração.
+[color=green]Nomes em verde[/color] são pessoas que viraram queridos para mim, seja amigos ou familia de consideração.\
+O restante está a lapis.
 - Fazendeiro.
 	set {Status.Speech} = 1
 	set {Status.Survival} = 3
 	set {Status.Strenght} = 2
 	set {Status.Player_background} = "Farmer"
 	Em seguida ele parece esclarecer algumas regras que ele usou para lembrar a si mesmo ou para quem quer que encontrasse esse diário.
-	Player: [color=red]Nomes escritos com caneta vermelha[/color] são os loucos que se perderam e acharam que me fazer se estrume era uma boa ideia\
+	Player: [color=red]Nomes escritos com caneta vermelha[/color] são os doidos que se perderam e acharam que me fazer se estrume era uma boa ideia\
 [color=blue]Nomes escritos com a azul[/color] são pessoas de bem que me ajudaram muito, seja fazendo alguma coisa ou só não me dando um tiro.\
-[color=green]Nomes em verde[/color] são pessoas do peito que eu gostaria de ter perto por muito mais tempo.
+[color=green]Nomes em verde[/color] são pessoas do peito que eu gostaria de ter perto por muito mais tempo.\
+O restante está a lapis.
 DEBUG\
 Nivel de Humanidade\: {Status.Humanity_level}; Nivel de Speech\: {Status.Speech}; Nivel de Survival\: {Status.Survival}; Nivel de Strength\: {Status.Strenght}; Background\: {Status.Player_background}
