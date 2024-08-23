@@ -8,14 +8,36 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	game_progress()
 
 
 
 func game_progress():
-	if Global.story_event00_Intro == true:
-		Global.progress_ratio_max = 0.1261
-		print("o Progress_ratio maximo é:", Global.progress_ratio_max)
+	if Global.story_event00_Intro == false: #FAILSAFE
+		Global.progress_ratio_max = 0.03
+		print("A Introdução não foi completada. Progresso impossivel!")
+	if Global.story_event00_Intro == true: #Intro feita. Primeiro evento Aberto!
+		Global.progress_ratio_max = 0.1261 #Coordenadas do PRIMEIRO EVENTO
+	
+	
+	if Global.story_event01_market == true: #Primeiro evento feito. Segundo evento aberto!
+		Global.progress_ratio_max = 0.2432 #Coordenadas do SEGUNDO EVENTO
+
+
+	if Global.story_event02_acai == true: #Segundo evento feito. Terceiro evento aberto!
+		Global.progress_ratio_max = 0.3964 #Coordenadas do TERCEIRO EVENTO
+		
+	if Global.story_event03_tunnel == true:
+		Global.progress_ratio_max = 0.6444 #Coordenadas do QUARTO EVENTO
+		
+	if Global.story_event04_shopping == true:
+		Global.progress_ratio_max = 0.8516 #Coordenadas do QUINTO EVENTO
+		
+	if Global.story_event05_university == true:
+		Global.progress_ratio_max = 0.98 #Coordenadas do SEXTO EVENTO
+		
+	#if Global.story_event06_pier == true: #Não tem por que existir agora, já tá no final do mapa.
+		#Global.progress_ratio_max = 0.98
 
 
 #Colisor do Evento 01

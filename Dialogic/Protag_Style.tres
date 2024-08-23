@@ -47,4 +47,4 @@ name = "Protag_Style"
 inherits = ExtResource("1_g035c")
 base_overrides = {}
 layers = Array[ExtResource("2_2irjr")]([SubResource("Resource_a557o"), SubResource("Resource_qpvct"), SubResource("Resource_ai7ed"), SubResource("Resource_axqno"), SubResource("Resource_woxpm"), SubResource("Resource_if7kd"), SubResource("Resource_lgh5u"), SubResource("Resource_loi2y")])
-metadata/_latest_layer = 3
+metadata/_latest_layer = 0

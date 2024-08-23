@@ -61,7 +61,8 @@ variables={
 "Speech": 0,
 "Strenght": 0,
 "Survival": 0
-}
+},
+"Valor": 1
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

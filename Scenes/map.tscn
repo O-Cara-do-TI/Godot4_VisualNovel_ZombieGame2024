@@ -45,8 +45,9 @@ curve = SubResource("Curve2D_f3m5b")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
 unique_name_in_owner = true
-position = Vector2(710, 505)
+position = Vector2(539.738, 544.025)
 rotation = 2.7012
+progress = 180.044
 rotates = false
 
 [node name="Camera2D" type="Camera2D" parent="Player/Path2D/PathFollow2D"]
@@ -128,6 +129,7 @@ scale = Vector2(2.48283, 2.48283)
 shape = SubResource("CircleShape2D_mn1uq")
 
 [node name="Dica" type="Label" parent="."]
+visible = false
 offset_left = 1165.0
 offset_top = 449.0
 offset_right = 1416.0
@@ -141,6 +143,7 @@ Evento05: 0.8516
 Evento06: 0.98"
 
 [node name="Dica2" type="Label" parent="."]
+visible = false
 offset_left = 1161.0
 offset_top = 214.0
 offset_right = 1435.0
@@ -149,6 +152,7 @@ text = "Feito: Ao colidir, botão de interação
 aparece. Se não, some."
 
 [node name="Dica3" type="Label" parent="."]
+visible = false
 offset_left = 1162.0
 offset_top = 332.0
 offset_right = 1415.0
@@ -159,12 +163,56 @@ Mais sons de lapis
 Aparencia do Botão de Interação"
 
 [node name="Dica4" type="Label" parent="."]
+visible = false
 offset_left = 1159.0
 offset_top = 270.0
 offset_right = 1457.0
 offset_bottom = 332.0
 text = "Main menu com creditos
 cursor personalizado(gabriel ou felipe)"
+
+[node name="EVENTOS" type="Label" parent="."]
+visible = false
+offset_left = 580.0
+offset_top = 466.0
+offset_right = 878.0
+offset_bottom = 528.0
+text = "Evento 01: 0.1261"
+
+[node name="EVENTOS2" type="Label" parent="EVENTOS"]
+offset_left = -102.0
+offset_top = 37.0
+offset_right = 196.0
+offset_bottom = 99.0
+text = "Evento 02: 0.2432"
+
+[node name="EVENTOS3" type="Label" parent="EVENTOS"]
+offset_left = -138.0
+offset_top = -40.0
+offset_right = 160.0
+offset_bottom = 22.0
+text = "Evento 03: 0.3964"
+
+[node name="EVENTOS4" type="Label" parent="EVENTOS"]
+offset_left = -84.0
+offset_top = -116.0
+offset_right = 214.0
+offset_bottom = -54.0
+text = "Evento 04: 0.6444"
+
+[node name="EVENTOS5" type="Label" parent="EVENTOS"]
+offset_left = 18.0
+offset_top = -219.0
+offset_right = 316.0
+offset_bottom = -157.0
+text = "Evento 05: 0.8516"
+
+[node name="EVENTOS6" type="Label" parent="EVENTOS"]
+offset_left = 104.0
+offset_top = -292.0
+offset_right = 402.0
+offset_bottom = -230.0
+text = "Evento 06: 0.98"
 
 [connection signal="body_entered" from="Map_events/01Market_Area2D" to="." method="_on_market_area_2d_body_entered"]
 [connection signal="body_exited" from="Map_events/01Market_Area2D" to="." method="_on_market_area_2d_body_exited"]
