@@ -4,7 +4,11 @@ extends Node
 #Variaveis Globais
 var Player_name = "" #Nome do jogador lá no Dialogic
 var Player_background = "" #Background do jogador lá no Dialogic
-var Humanity_level: float = 0 #Nivel de Humanidade lá no Dialogic
+
+#Status:
+var Humanity_level: float = 0 #Nivel de Humanidade lá no Dialogic; Quanto maior, melhor.
+
+#Vai de 1 a 3 atualmente. Máximo de 3.
 var Speech_level: float = 0 #Nivel de Speech lá no Dialogic
 var Strenght_level: float = 0 #Nivel de Força lá no Dialogic
 var Survival_level: float = 0 #Nivel de Survival lá no Dialogic
